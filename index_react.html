@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Web</title>
+    <link rel="stylesheet" href="./greenbody.css">
+</head>
+
+<body>
+    <!-- 練習開始 -->
+
+    <!-- 步驟一：載入React, Bable -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+    <!-- 步驟二：載入root元素 -->
+    <div id="root"></div>
+
+    <!-- 使用JSX，type類型為 "text/babel" -->
+    <script type="text/babel"> //使用JSX語法
+        // 檢查資源是否載入（非必要）
+        console.log(React, ReactDOM);   //注意大小寫
+        // 步驟三：建立 React 元件
+
+        //建立左欄元件  //return內最外層一定要是區塊元素
+        const Header = () => {
+            return (
+                <div className="leftBar">
+                    <h1><img src="./img/logo.png" alt="" /></h1>
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">最新消息</a></li>
+                        <li><a href="#">關於我們</a></li>
+                        <li><a href="#">產地直送</a></li>
+                        <li><a href="#">友善園地</a></li>
+                        <li><a href="#">線上訂購</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+            )
+        }
+        //建立右欄區元件
+        const Content = () => {
+            return (
+                <div className="rightCol">
+                    <div className="topBar">
+                        <p><img src="./img/title_img.png" alt="" /></p>
+                    </div>
+                    <h3>打造綠色身體 強化免疫機能</h3>
+                    <p>dhdthdrthdthdrthdthdrthdthdrthdthdrthdthdrthdthdrthdthdrthdthdrthdthdrtw</p>
+                    <p>etsthartsthartsthartsthartsthartsthartsthartsthartsthartsthartsthartsthartstharyar</p>
+
+                    <div className="card">
+                        <div className="col b1">
+                            <p><img src="./img/icon1.png" alt="" /></p>
+                            <h4>卡片名稱</h4>
+                            <p>卡片內容</p>
+                            <p><a href="#">詳細內容</a></p>
+                        </div>
+                        <div className="col b2">
+                            <p><img src="./img/icon2.png" alt="" /></p>
+                            <h4>卡片名稱</h4>
+                            <p>卡片內容</p>
+                            <p><a href="#">詳細內容</a></p>
+                        </div>
+                        <div className="col b3">
+                            <p><img src="./img/icon3.png" alt="" /></p>
+                            <h4>卡片名稱</h4>
+                            <p>卡片內容</p>
+                            <p><a href="#">詳細內容</a></p>
+                        </div>
+                    </div>
+                    <div className="footer">
+                        <h2>GreenBody有機蔬果</h2>
+                        <h4>Copyright 2023 &copy; GreenBody有機蔬果著作權所有</h4>
+                    </div>
+                </div>
+            )
+        }
+
+        function App() {      //做React元件必定要字首大寫(判斷字首大寫為元件)
+            return (
+                <div className="container">
+                    <Header />
+                    <Content/>
+                </div>
+            )
+        }
+        // 步驟四：渲染元件到根元件上
+        // const el = document.getElementById('root');
+        // const root = ReactDOM.createRoot(el); //可以合併為以下這行
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);  //將App元件渲染到root
+
+    </script>
+
+    <!-- 練習結束 -->
+</body>
+
+</html>

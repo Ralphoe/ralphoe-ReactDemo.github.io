@@ -1,0 +1,140 @@
+/*簡易reset*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.container {
+    /* border: red 1px solid; */
+    display: flex;
+    height: 1200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/*左側區*/
+
+.leftBar {
+    width: 260px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    /*背景會自動填滿*/
+    background: url("./felxbox-2ex/img/left_bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /* background-color: rgb(69,72,59); */
+    background-color: #899076;
+}
+
+.leftBar ul {
+    padding: 40px;
+}
+
+.leftBar li {
+    list-style: none;
+}
+
+.leftBar li a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: dotted 1px #fff;
+    /*將超連結轉換成區塊元素(超連結是行內元素，沒有寬高範圍=>依據內容)*/
+    display: block;
+    /*垂直區塊轉換使用*/
+    /*如果是水平區塊要用 display:inline-block;*/
+    text-align: center;
+    /*置中*/
+    line-height: 80px;
+    /*行高*/
+}
+
+/*右側區*/
+
+.rightCol {
+    display: flex;
+    flex-direction: column;
+    background-color: #E8E8D0;
+    width: 820px;
+    padding: 20px 40px;
+}
+.rightCol .topBar p img{
+    width: 100%;
+    /* padding: -40px -40px;     */
+}
+
+.rightCol h3 {
+    font-size: 32px;
+    color: #424831;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.rightCol p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.card {
+    /* border: 1px red solid; */
+    display: flex;
+    justify-content: space-between;
+    border-top: black 1px solid;
+    border-bottom: black 1px solid;
+    padding: 20px 0;
+}
+
+.card .col {
+    /* border: red solid 1px; */
+    /* width: 220px; */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3%;
+}
+
+.card .b1 {
+    background-color: rgb(246, 215, 220);
+}
+
+.card .b2 {
+    background-color: rgb(237, 214, 165);
+}
+
+.card .b3 {
+    background-color: rgb(154, 190, 151);
+}
+
+.card .col h4 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.card .col p {
+    font-size: 20px;
+    text-align: center;
+}
+.card .col a{
+    color: #fff;
+    text-decoration: none;
+    background-color: #424831;
+    /*不轉區塊元素撐開邊界*/
+    /* padding: 10px 40px; */
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+.footer {
+    background: #424831;
+    color: #899076;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+}
